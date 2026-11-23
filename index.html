@@ -21,29 +21,46 @@
         </a>
       </div>
 
-      <nav class="main-nav" aria-label="Navegación principal">
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
         <ul class="nav-list">
           <li><a href="#presentacion" class="nav-link">Presentación</a></li>
           <li><a href="#equipo" class="nav-link">Equipo</a></li>
-          <li><a href="#propuestas" class="nav-link">Propuestas</a></li>
+          <li><a href="#propuesta-r1" class="nav-link">Propuesta 1 (R1)</a></li>
+          <li><a href="#propuesta-r2" class="nav-link">Propuesta 2 (R2)</a></li>
           <li><a href="#decisiones-grupo" class="nav-link">Decisiones del Grupo</a></li>
-          <li><a href="#diagramas" class="nav-link">Diagramas de Flujo</a></li>
-          <li><a href="#detalle-tecnico" class="nav-link">Detalle Técnico</a></li>
         </ul>
       </nav>
 
-      <!-- Botón de Alternancia de Tema (Modo Claro / Modo Oscuro) -->
-      <div class="theme-switch-wrapper">
+      <!-- Grupo de Acciones: Switcher de Tema y Menú Móvil -->
+      <div class="header-actions">
+        <div class="theme-switch-wrapper">
+          <button 
+            type="button" 
+            id="theme-toggle" 
+            class="theme-toggle-btn" 
+            aria-label="Cambiar tema: Oscuro / Claro" 
+            aria-pressed="false"
+            title="Alternar entre Modo Claro (Fondo Marfil Limpio y Cobalto) y Modo Oscuro (Azul Carbón, Turquesa y Dorado)"
+          >
+            <span class="theme-icon" aria-hidden="true">☀️</span>
+            <span class="theme-text">Modo Claro</span>
+          </button>
+        </div>
+
         <button 
           type="button" 
-          id="theme-toggle" 
-          class="theme-toggle-btn" 
-          aria-label="Cambiar tema: Oscuro / Claro" 
-          aria-pressed="false"
-          title="Alternar entre Modo Claro (Fondo Marfil Limpio y Cobalto) y Modo Oscuro (Azul Carbón, Turquesa y Dorado)"
+          id="menu-toggle" 
+          class="menu-toggle-btn" 
+          aria-label="Abrir menú de navegación" 
+          aria-expanded="false" 
+          aria-controls="main-nav"
         >
-          <span class="theme-icon" aria-hidden="true">☀️</span>
-          <span class="theme-text">Modo Claro</span>
+          <span class="hamburger-icon" aria-hidden="true">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </span>
+          <span class="menu-text sr-only">Menú</span>
         </button>
       </div>
     </div>
@@ -123,23 +140,56 @@
 
         <div class="team-grid">
           <div class="team-card">
-            <div class="team-avatar">SB</div>
+            <div class="team-avatar-frame">
+              <img 
+                src="assets/nosotros/sergio.png" 
+                alt="Fotografía de Sergio Cesar Barrientos, Lógica Proposicional y Flujos en el Equipo 32" 
+                class="team-photo" 
+                width="120" 
+                height="120" 
+                loading="lazy"
+                onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+              >
+              <div class="team-avatar team-avatar-fallback is-hidden" aria-hidden="true">SB</div>
+            </div>
             <div class="team-info">
               <h3 class="team-name">Sergio Cesar Barrientos</h3>
-              <span class="team-role">Lógica Proposicional & Flujos</span>
+              <span class="team-role">Lógica Proposicional &amp; Flujos</span>
             </div>
           </div>
 
           <div class="team-card">
-            <div class="team-avatar">CS</div>
+            <div class="team-avatar-frame">
+              <img 
+                src="assets/nosotros/carolina-foto.png" 
+                alt="Fotografía de Carolina Silva Cotto, Diseño Front End y Temas en el Equipo 32" 
+                class="team-photo" 
+                width="120" 
+                height="120" 
+                loading="lazy"
+                onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+              >
+              <div class="team-avatar team-avatar-fallback is-hidden" aria-hidden="true">CS</div>
+            </div>
             <div class="team-info">
               <h3 class="team-name">Carolina Silva Cotto</h3>
-              <span class="team-role">Diseño Front End & Temas</span>
+              <span class="team-role">Diseño Front End &amp; Temas</span>
             </div>
           </div>
 
           <div class="team-card">
-            <div class="team-avatar">MM</div>
+            <div class="team-avatar-frame">
+              <img 
+                src="assets/nosotros/miguel.png" 
+                alt="Fotografía de Miguel Angel Marcaida, Ingeniería de Requerimientos en el Equipo 32" 
+                class="team-photo" 
+                width="120" 
+                height="120" 
+                loading="lazy"
+                onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+              >
+              <div class="team-avatar team-avatar-fallback is-hidden" aria-hidden="true">MM</div>
+            </div>
             <div class="team-info">
               <h3 class="team-name">Miguel Angel Marcaida</h3>
               <span class="team-role">Ingeniería de Requerimientos</span>
@@ -147,7 +197,18 @@
           </div>
 
           <div class="team-card">
-            <div class="team-avatar">MS</div>
+            <div class="team-avatar-frame">
+              <img 
+                src="assets/nosotros/mariana.webp" 
+                alt="Fotografía de Mariana Sosa, Modelado de Diagramas SVG en el Equipo 32" 
+                class="team-photo" 
+                width="120" 
+                height="120" 
+                loading="lazy"
+                onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+              >
+              <div class="team-avatar team-avatar-fallback is-hidden" aria-hidden="true">MS</div>
+            </div>
             <div class="team-info">
               <h3 class="team-name">Mariana Sosa</h3>
               <span class="team-role">Modelado de Diagramas SVG</span>
@@ -155,10 +216,21 @@
           </div>
 
           <div class="team-card">
-            <div class="team-avatar">KS</div>
+            <div class="team-avatar-frame">
+              <img 
+                src="assets/nosotros/karina.png" 
+                alt="Fotografía de Karina Sanchez, Casos Límite y Accesibilidad en el Equipo 32" 
+                class="team-photo" 
+                width="120" 
+                height="120" 
+                loading="lazy"
+                onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+              >
+              <div class="team-avatar team-avatar-fallback is-hidden" aria-hidden="true">KS</div>
+            </div>
             <div class="team-info">
               <h3 class="team-name">Karina Sanchez</h3>
-              <span class="team-role">Casos Límite & Accesibilidad</span>
+              <span class="team-role">Casos Límite &amp; Accesibilidad</span>
             </div>
           </div>
         </div>
@@ -167,23 +239,25 @@
 
 
     <!-- =========================================================================
-         3. SECCIÓN SENTENCIAS Y PROPUESTAS AGÉNTICAS
+         3. BLOQUE COMPLETO PROPUESTA 1 · BUSCADOR INTELIGENTE (R1)
          ========================================================================= -->
-    <section id="propuestas" class="section">
-      <div class="container">
+    <section id="propuesta-r1" class="section">
+      <div class="container proposal-block">
+        
         <div class="section-header">
-          <span class="section-tag">Diseño Agéntico</span>
-          <h2 class="section-title">Sentencias y Propuestas Agénticas</h2>
+          <span class="section-tag">Bloque Completo · Propuesta 1</span>
+          <h2 class="section-title">Buscador Inteligente (R1)</h2>
           <p class="section-lead">
-            Formalización de las dos reglas asignadas al Bloque S13-A, su análisis lógico y la especificación de los agentes asistentes.
+            Conexión de estudiantes con condiciones compatibles basada en perfil completo (<code class="formula-chip">p ∧ q ∧ r</code>): sentencia original, formalización lógica, beneficio, diagrama de flujo y funcionamiento técnico detallado.
           </p>
         </div>
 
-        <div class="grid-two-columns">
+        <!-- Síntesis, Lógica y Propuesta Agéntica (Grilla 2 Columnas) -->
+        <div class="block-overview-grid">
           
-          <!-- TARJETA PROPUESTA 1 (R1) -->
+          <!-- Tarjeta Izquierda: Sentencia Original y Formalización Lógica -->
           <article class="card rule-card" id="card-r1">
-            <div class="card-badge">Propuesta 1 · R1</div>
+            <div class="card-badge">Sentencia &amp; Lógica · R1</div>
             
             <div class="original-sentence-box">
               <span class="box-label">Sentencia original (R1):</span>
@@ -198,185 +272,77 @@
                 <li><span class="prop-var">p</span> = El estudiante completó tema de estudio</li>
                 <li><span class="prop-var">q</span> = El estudiante completó disponibilidad</li>
                 <li><span class="prop-var">r</span> = El estudiante completó modalidad</li>
-                <li><strong>Condición lógica:</strong> <code class="formula-chip">p ∧ q ∧ r</code> (los tres datos completos).</li>
+                <li><strong>Condición lógica:</strong> <code class="formula-chip">p ∧ q ∧ r</code> (conjunción estricta: los tres datos completos simultáneamente).</li>
               </ul>
             </div>
+          </article>
 
-            <div class="proposal-solution-box">
+          <!-- Tarjeta Derecha: Propuesta Agéntica y Beneficio -->
+          <article class="card rule-card">
+            <div class="proposal-solution-box" style="height: 100%; border-radius: var(--radius-lg);">
               <div class="proposal-badge">
-                <span class="badge-icon" aria-hidden="true">⚡</span> Propuesta 1
+                <span class="badge-icon" aria-hidden="true">⚡</span> Propuesta Agéntica 1
               </div>
-              <h3 class="proposal-title">Buscador Inteligente</h3>
+              <h3 class="proposal-title">Asistente Buscador Inteligente</h3>
               <p class="proposal-text">
-                Un agente que recibe el perfil del estudiante, verifica que los tres datos estén completos (<code class="formula-inline">p ∧ q ∧ r</code>) y, si se cumple la condición, consulta la base de datos de perfiles de StudyMatch para encontrar estudiantes con condiciones compatibles.
+                Un agente asistente que recibe el perfil del estudiante, valida que los tres datos requeridos estén completos (<code class="formula-inline">p ∧ q ∧ r</code>) y, al cumplirse la condición, consulta la base de datos de perfiles de StudyMatch para devolver compañeros con intereses y horarios compatibles.
               </p>
               
               <div class="benefit-card">
-                <strong>✨ Beneficio:</strong> Facilita encontrar compañeros para estudiar de forma rápida y evita que los estudiantes tengan que buscarlos manualmente. Ahorra tiempo y permite conectar personas con intereses, horarios y modalidades compatibles.
+                <strong>✨ Beneficio:</strong> Facilita encontrar compañeros para estudiar de forma rápida y evita que los estudiantes tengan que buscarlos manualmente de forma desorganizada. Ahorra tiempo y optimiza la compatibilidad según materias, horarios y modalidad.
               </div>
 
               <div class="agent-workflow-card">
                 <h4 class="workflow-title">Mecanismo Concluyente de R1:</h4>
                 <ul class="workflow-bullets">
-                  <li><strong>Herramienta necesaria:</strong> Base de datos de perfiles de StudyMatch.</li>
+                  <li><strong>Herramienta consultada:</strong> Base de datos de perfiles de StudyMatch.</li>
                   <li><strong>Resultado esperado:</strong> El sistema devuelve una lista de compañeros compatibles para que el estudiante pueda elegir.</li>
-                  <li><strong>Intervención humana:</strong> El estudiante decide con quién desea conectarse de la lista presentada.</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <!-- TARJETA PROPUESTA 2 (R2) -->
-          <article class="card rule-card" id="card-r2">
-            <div class="card-badge card-badge-amber">Propuesta 2 · R2</div>
-            
-            <div class="original-sentence-box original-box-amber">
-              <span class="box-label label-amber">Sentencia original (R2):</span>
-              <blockquote class="exact-quote">
-                &ldquo;Si falta alguno de esos datos, el sistema solicita completarlo y explica que todavía no puede realizar la búsqueda.&rdquo;
-              </blockquote>
-            </div>
-
-            <div class="formal-spec-box">
-              <h4 class="spec-heading">Formalización Lógica:</h4>
-              <ul class="spec-list">
-                <li><span class="prop-var">p</span> = completó tema · <span class="prop-var">q</span> = completó disponibilidad · <span class="prop-var">r</span> = completó modalidad</li>
-                <li><strong>Condición lógica:</strong> <code class="formula-chip chip-amber">¬p ∨ ¬q ∨ ¬r</code> (se activa con que falte al menos un dato).</li>
-              </ul>
-            </div>
-
-            <div class="proposal-solution-box proposal-box-amber">
-              <div class="proposal-badge badge-amber">
-                <span class="badge-icon" aria-hidden="true">⚡</span> Propuesta 2
-              </div>
-              <h3 class="proposal-title">Asistente de Perfil</h3>
-              <p class="proposal-text">
-                Un agente que revisa los datos ingresados por el estudiante, detecta cuáles faltan y solicita que los complete. También explica que todavía no puede realizar la búsqueda porque necesita los tres datos para continuar.
-              </p>
-              
-              <div class="benefit-card">
-                <strong>✨ Beneficio:</strong> Evita búsquedas vacías o engañosas antes de contar con toda la información necesaria. Orienta al estudiante sobre qué datos le faltan completar y le explica con claridad por qué aún no se puede realizar la búsqueda.
-              </div>
-
-              <div class="agent-workflow-card">
-                <h4 class="workflow-title">Mecanismo Concluyente de R2:</h4>
-                <ul class="workflow-bullets">
-                  <li><strong>Herramienta necesaria:</strong> Formulario de ingreso de datos de StudyMatch. No necesita consultar la base de datos de compañeros.</li>
-                  <li><strong>Resultado esperado:</strong> El estudiante sabe qué información falta y puede completarla para continuar.</li>
-                  <li><strong>Intervención humana:</strong> El estudiante debe ingresar personalmente los datos faltantes (y puede solicitar orientación).</li>
+                  <li><strong>Intervención humana:</strong> El estudiante decide personalmente con quién desea conectarse de la lista presentada.</li>
                 </ul>
               </div>
             </div>
           </article>
 
         </div>
-      </div>
-    </section>
 
-
-    <!-- =========================================================================
-         4. SECCIÓN DECISIONES PROPIAS DEL GRUPO (SUPUESTOS NO DEFINIDOS POR R1 NI R2)
-         ========================================================================= -->
-    <section id="decisiones-grupo" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag section-tag-amber">Extensión Arquitectónica</span>
-          <h2 class="section-title">Decisiones Propias del Grupo 32</h2>
-          <p class="section-lead">
-            Distinción explícita de los supuestos y decisiones agregadas por el equipo que <strong>NO están definidos por las sentencias originales R1 ni R2</strong>:
-          </p>
-        </div>
-
-        <div class="decisions-container">
-          <div class="grid-two-columns">
-            
-            <div class="card decision-card">
-              <div class="decision-badge">Decisión 1</div>
-              <h3 class="decision-title">Volver a evaluar R1</h3>
-              <p class="decision-text">
-                Después de que el estudiante completa los datos faltantes en R2, <strong>el agente verifica nuevamente si los tres datos están completos</strong> para enlazar automáticamente con la búsqueda de R1 sin requerir recargar la página.
-              </p>
+        <!-- Diagrama de Flujo Vectorial de R1 -->
+        <article class="card diagram-card" id="diagram-r1">
+          <div class="diagram-card-header">
+            <div class="diagram-header-info">
+              <span class="flow-pill-badge">Diagrama de Flujo · R1</span>
+              <h3 class="diagram-heading">Proceso Agéntico del Buscador Inteligente (R1 · p ∧ q ∧ r)</h3>
             </div>
-
-            <div class="card decision-card">
-              <div class="decision-badge">Decisión 2</div>
-              <h3 class="decision-title">Sin coincidencias</h3>
-              <p class="decision-text">
-                Si la base de datos de perfiles no encuentra compañeros compatibles con esas condiciones, el sistema <strong>informa al estudiante y le ofrece alternativas</strong> (por ejemplo, sugerir ampliar franjas horarias o derivar a orientación humana).
-              </p>
-            </div>
-
-            <div class="card decision-card">
-              <div class="decision-badge">Decisión 3</div>
-              <h3 class="decision-title">Disponibilidad inválida</h3>
-              <p class="decision-text">
-                El sistema valida el formato horario ingresado; si detecta una estructura inválida, <strong>informa el error y solicita corregirlo</strong> antes de evaluar la completitud del perfil.
-              </p>
-            </div>
-
-            <div class="card decision-card">
-              <div class="decision-badge">Decisión 4</div>
-              <h3 class="decision-title">Elección de compañeros</h3>
-              <p class="decision-text">
-                El sistema no empareja ni envía invitaciones de manera arbitraria; <strong>el estudiante decide personalmente con quién desea conectarse</strong> a partir de la lista de resultados compatibles (intervención humana decisiva).
-              </p>
-            </div>
-
-          </div>
-
-          <!-- Aclaración Importante sobre Validación de Disponibilidad -->
-          <div class="card important-notice-card">
-            <div class="notice-header">
-              <span class="notice-icon" aria-hidden="true">⚠️</span>
-              <h3 class="notice-title">Aclaración Importante sobre la Disponibilidad Horaria</h3>
-            </div>
-            <p class="notice-body">
-              La restricción de caracteres y formato de disponibilidad (<code>desde: hh:mm hasta: hh:mm</code>, por ejemplo <code>08:00 hasta 12:00</code>) es una <strong>propuesta adicional de diseño del grupo</strong> y no una condición contemplada por las sentencias originales de R1 ni R2.
-            </p>
-            <p class="notice-body">
-              Asimismo, se determinó que <strong>no alcanza únicamente con validar caracteres alfanuméricos</strong>: el sistema debe comprobar de forma lógica que las horas y minutos sean válidos (formato de 24 horas entre 00:00 y 23:59) y verificar que <strong>la hora inicial sea estrictamente anterior a la hora final</strong> (por ejemplo: <code>08:00 hasta 12:00</code> es válido; <code>25:00</code> o <code>14:00 hasta 09:00</code> son catalogados como inválidos).
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- =========================================================================
-         5. SECCIÓN DIAGRAMAS DE FLUJO VECTORIALES (SVG CLAROS Y MODERNOS)
-         ========================================================================= -->
-    <section id="diagramas" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Modelado Visual</span>
-          <h2 class="section-title">Diagramas de Flujo de los Procesos Agénticos</h2>
-          <p class="section-lead">
-            Recorridos claros y legibles para desktop: inicio, entradas, decisiones con flechas y etiquetas SÍ / NO, acciones, resultados, intervención humana y decisiones del grupo claramente identificadas.
-          </p>
-        </div>
-
-        <div class="diagrams-stack">
-
-          <!-- ==================== DIAGRAMA 1 (R1) ==================== -->
-          <article class="card diagram-card" id="diagram-r1">
-            <div class="diagram-card-header">
-              <div>
-                <span class="flow-pill-badge">Flujo 1 · Propuesta 1</span>
-                <h3 class="diagram-heading">Buscador Inteligente (R1 · Condición: p ∧ q ∧ r)</h3>
-              </div>
+            <div class="diagram-header-actions">
               <span class="status-badge status-success">Condición p ∧ q ∧ r = SÍ</span>
+              <button 
+                type="button" 
+                class="btn-expand-diagram" 
+                data-diagram="diagram-r1" 
+                aria-label="Ampliar Diagrama de Flujo R1 en pantalla completa"
+                title="Abrir diagrama de Flujo 1 en vista ampliada modal"
+              >
+                <span aria-hidden="true">🔍</span> Ampliar diagrama
+              </button>
             </div>
+          </div>
 
-            <div class="diagram-note">
-              <span class="note-icon" aria-hidden="true">ℹ️</span>
-              <p>
-                <strong>Flujo 1:</strong> Inicio (estudiante envía perfil) → Entrada: tema, disponibilidad, modalidad → ¿Los tres datos están completos? → <strong>SÍ:</strong> buscar compañeros compatibles en BD StudyMatch → mostrar resultados → el estudiante elige con quién conectar → fin. <strong>NO:</strong> pasa al Flujo 2. <em>(Los recuadros con borde ámbar y etiqueta especial señalan decisiones propias del Grupo 32).</em>
-              </p>
-            </div>
+          <div class="diagram-note">
+            <span class="note-icon" aria-hidden="true">ℹ️</span>
+            <p>
+              <strong>Recorrido del Flujo 1:</strong> Inicio (estudiante envía perfil) → Entrada: tema, disponibilidad, modalidad → ¿Formato horario válido? [Decisión G32] → ¿Los tres datos están completos? → <strong>SÍ:</strong> buscar compañeros compatibles en BD StudyMatch → ¿Se hallaron compañeros? [Decisión G32] → <strong>SÍ:</strong> mostrar resultados → <em>el estudiante elige con quién conectar</em> → fin. <strong>NO (faltan datos):</strong> pasa al Flujo 2. <em>(Los recuadros con borde ámbar y etiqueta especial identifican decisiones propias del Grupo 32).</em>
+            </p>
+          </div>
 
-            <!-- SVG 1: Limpio, ordenado, moderno con paleta del logo (azul, turquesa, dorado, azul carbón) -->
-            <div class="svg-diagram-wrapper" role="region" aria-label="Diagrama de flujo del Buscador Inteligente R1">
-              <svg viewBox="0 0 1000 780" class="flowchart-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="desc-svg-r1">
+          <div 
+            class="svg-diagram-wrapper" 
+            role="region" 
+            tabindex="0"
+            aria-label="Diagrama de flujo del Buscador Inteligente R1. Clic o Enter para ampliar en pantalla completa."
+            data-diagram="diagram-r1"
+            title="Haz clic para abrir este diagrama en pantalla completa ampliada"
+          >
+            <span class="diagram-interactive-hint" aria-hidden="true">🔍 Clic para ampliar</span>
+            <svg viewBox="0 0 1000 780" class="flowchart-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="desc-svg-r1">
                 <title id="title-svg-r1">Diagrama de Flujo 1 · Propuesta 1 (R1) - Buscador Inteligente</title>
                 <desc id="desc-svg-r1">Diagrama del buscador inteligente que valida tema, disponibilidad y modalidad (p ∧ q ∧ r), consulta la BD de perfiles y permite al alumno elegir compañeros.</desc>
 
@@ -551,30 +517,188 @@
                   <text x="115" y="28" text-anchor="middle" fill="#ffffff" font-weight="800" font-size="14">■ FIN</text>
                 </g>
               </svg>
+          </div>
+        </article>
+
+        <!-- Desplegable Técnico: Funcionamiento del agente R1 -->
+        <div class="block-accordion-wrapper">
+          <div class="accordion-group">
+            <div class="accordion-item" data-flow="r1">
+              <button type="button" class="accordion-trigger" id="accordion-trigger-r1" aria-expanded="false" aria-controls="accordion-panel-r1">
+                <span class="trigger-title">
+                  <span class="flow-pill">Funcionamiento</span>
+                  <span>Funcionamiento del agente R1 · Ficha Técnica, Herramientas y Casos Límite</span>
+                </span>
+                <span class="trigger-icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-panel" id="accordion-panel-r1" role="region" aria-labelledby="accordion-trigger-r1" hidden>
+                <div class="technical-grid">
+                  
+                  <div class="tech-item">
+                    <div class="tech-label">1) Datos de entrada</div>
+                    <div class="tech-value">
+                      <p>Tema de estudio, disponibilidad horaria y modalidad (presencial / virtual).</p>
+                    </div>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-label">2) Decisión</div>
+                    <div class="tech-value">
+                      <p>El agente comprueba si los tres datos están completos (<code class="formula-chip">p ∧ q ∧ r</code>).</p>
+                    </div>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-label">3) Acción propuesta</div>
+                    <div class="tech-value">
+                      <p>Si están completos, consulta la base de datos de perfiles de StudyMatch y busca estudiantes con condiciones compatibles.</p>
+                    </div>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-label">4) Herramienta necesaria</div>
+                    <div class="tech-value">
+                      <p>Base de datos de perfiles de StudyMatch (acceso de consulta).</p>
+                    </div>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-label">5) Resultado esperado</div>
+                    <div class="tech-value">
+                      <p>El sistema devuelve una lista de compañeros compatibles para que el estudiante pueda elegir.</p>
+                    </div>
+                  </div>
+
+                  <div class="tech-item highlight-human">
+                    <div class="tech-label">6) Excepciones y casos límite</div>
+                    <div class="tech-value">
+                      <ul>
+                        <li><strong>Falta algún dato:</strong> Se deriva de inmediato al Flujo 2 (Asistente de Perfil).</li>
+                        <li><strong>Sin compañeros compatibles:</strong> Se informa al estudiante y se le ofrecen alternativas de ajuste pedagógico y franjas horarias <em>(decisión del grupo)</em>.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tech-item highlight-human" style="grid-column: 1 / -1;">
+                    <div class="tech-label">7) Intervención humana</div>
+                    <div class="tech-value">
+                      <p><strong>El estudiante decide con quién conectarse:</strong> El agente no realiza emparejamientos automáticos ni envía invitaciones no consentidas; la decisión final de interacción recae exclusivamente en la persona usuaria.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         4. BLOQUE COMPLETO PROPUESTA 2 · ASISTENTE DE PERFIL (R2)
+         ========================================================================= -->
+    <section id="propuesta-r2" class="section section-alt">
+      <div class="container proposal-block">
+        
+        <div class="section-header">
+          <span class="section-tag section-tag-amber">Bloque Completo · Propuesta 2</span>
+          <h2 class="section-title">Asistente de Perfil (R2)</h2>
+          <p class="section-lead">
+            Detección preventiva de datos incompletos (<code class="formula-chip chip-amber">¬p ∨ ¬q ∨ ¬r</code>) y orientación al usuario: sentencia original, formalización lógica, beneficio, diagrama de flujo y funcionamiento técnico detallado.
+          </p>
+        </div>
+
+        <!-- Síntesis, Lógica y Propuesta Agéntica (Grilla 2 Columnas) -->
+        <div class="block-overview-grid">
+          
+          <!-- Tarjeta Izquierda: Sentencia Original y Formalización Lógica -->
+          <article class="card rule-card" id="card-r2">
+            <div class="card-badge card-badge-amber">Sentencia &amp; Lógica · R2</div>
+            
+            <div class="original-sentence-box original-box-amber">
+              <span class="box-label label-amber">Sentencia original (R2):</span>
+              <blockquote class="exact-quote">
+                &ldquo;Si falta alguno de esos datos, el sistema solicita completarlo y explica que todavía no puede realizar la búsqueda.&rdquo;
+              </blockquote>
+            </div>
+
+            <div class="formal-spec-box">
+              <h4 class="spec-heading">Formalización Lógica:</h4>
+              <ul class="spec-list">
+                <li><span class="prop-var">p</span> = completó tema · <span class="prop-var">q</span> = completó disponibilidad · <span class="prop-var">r</span> = completó modalidad</li>
+                <li><strong>Condición lógica:</strong> <code class="formula-chip chip-amber">¬p ∨ ¬q ∨ ¬r</code> (disyunción: se activa cuando falta al menos un dato obligatorio).</li>
+              </ul>
             </div>
           </article>
 
-
-          <!-- ==================== DIAGRAMA 2 (R2) ==================== -->
-          <article class="card diagram-card" id="diagram-r2">
-            <div class="diagram-card-header">
-              <div>
-                <span class="flow-pill-badge pill-amber">Flujo 2 · Propuesta 2</span>
-                <h3 class="diagram-heading">Asistente de Perfil (R2 · Condición: ¬p ∨ ¬q ∨ ¬r)</h3>
+          <!-- Tarjeta Derecha: Propuesta Agéntica y Beneficio -->
+          <article class="card rule-card" style="border-top-color: var(--color-accent);">
+            <div class="proposal-solution-box proposal-box-amber" style="height: 100%; border-radius: var(--radius-lg);">
+              <div class="proposal-badge badge-amber">
+                <span class="badge-icon" aria-hidden="true">⚡</span> Propuesta Agéntica 2
               </div>
-              <span class="status-badge status-warning">Falta dato = SÍ</span>
-            </div>
-
-            <div class="diagram-note">
-              <span class="note-icon" aria-hidden="true">ℹ️</span>
-              <p>
-                <strong>Flujo 2:</strong> Inicio (perfil con datos faltantes) → Entrada: los tres campos → ¿Falta alguno? → <strong>SÍ:</strong> identificar el dato faltante → solicitar completarlo → explicar que todavía no se puede buscar → <em>intervención humana: estudiante ingresa datos faltantes</em> → fin / <strong>re-evalúa R1 (decisión del grupo)</strong>. <strong>NO:</strong> corresponde al Flujo 1.
+              <h3 class="proposal-title">Asistente Orientador de Perfil</h3>
+              <p class="proposal-text">
+                Un agente que inspecciona los datos ingresados por el estudiante, detecta exactamente cuál o cuáles faltan y solicita completarlos, explicando didácticamente que todavía no puede realizar la búsqueda porque se requieren los tres datos para conectar.
               </p>
-            </div>
+              
+              <div class="benefit-card">
+                <strong>✨ Beneficio:</strong> Evita búsquedas vacías o engañosas antes de contar con toda la información necesaria. Orienta al estudiante sobre qué datos le faltan completar y le explica con claridad didáctica por qué aún no se puede realizar la búsqueda.
+              </div>
 
-            <!-- SVG 2: Limpio, ordenado, moderno con paleta del logo (azul, turquesa, dorado, azul carbón) -->
-            <div class="svg-diagram-wrapper" role="region" aria-label="Diagrama de flujo del Asistente de Perfil R2">
-              <svg viewBox="0 0 1000 780" class="flowchart-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="desc-svg-r2">
+              <div class="agent-workflow-card">
+                <h4 class="workflow-title">Mecanismo Concluyente de R2:</h4>
+                <ul class="workflow-bullets">
+                  <li><strong>Herramienta consultada:</strong> Formulario de ingreso de datos de StudyMatch. <strong>No necesita consultar la base de datos de compañeros</strong> (privacidad y optimización).</li>
+                  <li><strong>Resultado esperado:</strong> El estudiante sabe con precisión qué información falta y puede completarla para continuar.</li>
+                  <li><strong>Intervención humana:</strong> El estudiante ingresa personalmente los datos faltantes (y puede solicitar orientación tutorial).</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Diagrama de Flujo Vectorial de R2 -->
+        <article class="card diagram-card" id="diagram-r2">
+          <div class="diagram-card-header">
+            <div class="diagram-header-info">
+              <span class="flow-pill-badge pill-amber">Diagrama de Flujo · R2</span>
+              <h3 class="diagram-heading">Proceso Agéntico del Asistente de Perfil (R2 · ¬p ∨ ¬q ∨ ¬r)</h3>
+            </div>
+            <div class="diagram-header-actions">
+              <span class="status-badge status-warning">Falta al menos un dato = SÍ</span>
+              <button 
+                type="button" 
+                class="btn-expand-diagram" 
+                data-diagram="diagram-r2" 
+                aria-label="Ampliar Diagrama de Flujo R2 en pantalla completa"
+                title="Abrir diagrama de Flujo 2 en vista ampliada modal"
+              >
+                <span aria-hidden="true">🔍</span> Ampliar diagrama
+              </button>
+            </div>
+          </div>
+
+          <div class="diagram-note">
+            <span class="note-icon" aria-hidden="true">ℹ️</span>
+            <p>
+              <strong>Recorrido del Flujo 2:</strong> Inicio (perfil con datos faltantes) → Entrada: los tres campos → ¿Falta alguno? → <strong>SÍ:</strong> identificar el dato faltante → solicitar completarlo y explicar motivo → <em>intervención humana: estudiante ingresa datos faltantes</em> → <strong>bucle de reevaluación hacia R1 [Decisión Grupo 32]</strong> → fin / reanuda. <strong>NO (perfil completo):</strong> corresponde al Flujo 1.
+            </p>
+          </div>
+
+          <div 
+            class="svg-diagram-wrapper" 
+            role="region" 
+            tabindex="0"
+            aria-label="Diagrama de flujo del Asistente de Perfil R2. Clic o Enter para ampliar en pantalla completa."
+            data-diagram="diagram-r2"
+            title="Haz clic para abrir este diagrama en pantalla completa ampliada"
+          >
+            <span class="diagram-interactive-hint" aria-hidden="true">🔍 Clic para ampliar</span>
+            <svg viewBox="0 0 1000 780" class="flowchart-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="desc-svg-r2">
                 <title id="title-svg-r2">Diagrama de Flujo 2 · Propuesta 2 (R2) - Asistente de Perfil</title>
                 <desc id="desc-svg-r2">Diagrama del asistente de perfil que detecta datos faltantes (¬p ∨ ¬q ∨ ¬r), pausa preventivamente, solicita completar y re-evalúa R1.</desc>
 
@@ -675,158 +799,230 @@
                   <text x="130" y="28" text-anchor="middle" fill="#ffffff" font-weight="800" font-size="14">■ FIN (En espera / Reanuda)</text>
                 </g>
               </svg>
-            </div>
-          </article>
+          </div>
+        </article>
 
+        <!-- Desplegable Técnico: Funcionamiento del agente R2 -->
+        <div class="block-accordion-wrapper">
+          <div class="accordion-group">
+            <div class="accordion-item" data-flow="r2">
+              <button type="button" class="accordion-trigger" id="accordion-trigger-r2" aria-expanded="false" aria-controls="accordion-panel-r2">
+                <span class="trigger-title">
+                  <span class="flow-pill flow-pill-amber">Funcionamiento</span>
+                  <span>Funcionamiento del agente R2 · Ficha Técnica, Herramientas y Casos Límite</span>
+                </span>
+                <span class="trigger-icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-panel" id="accordion-panel-r2" role="region" aria-labelledby="accordion-trigger-r2" hidden>
+                <div class="technical-grid">
+                  
+                  <div class="tech-item">
+                    <div class="tech-label">1) Datos de entrada</div>
+                    <div class="tech-value">
+                      <p>Tema de estudio, disponibilidad horaria y modalidad.</p>
+                    </div>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-label">2) Decisión</div>
+                    <div class="tech-value">
+                      <p>El agente verifica si falta al menos uno de los tres datos obligatorios (<code class="formula-chip chip-amber">¬p ∨ ¬q ∨ ¬r</code>).</p>
+                    </div>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-label">3) Acción propuesta</div>
+                    <div class="tech-value">
+                      <p>Si falta información, identifica los campos incompletos, solicita completarlos y explica por qué todavía no puede realizar la búsqueda.</p>
+                    </div>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-label">4) Herramienta necesaria</div>
+                    <div class="tech-value">
+                      <p>Formulario de ingreso de datos de StudyMatch. <strong>No necesita consultar la base de datos de compañeros</strong> (ahorro de cómputo y privacidad).</p>
+                    </div>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-label">5) Resultado esperado</div>
+                    <div class="tech-value">
+                      <p>El estudiante sabe qué información falta y puede completarla para continuar.</p>
+                    </div>
+                  </div>
+
+                  <div class="tech-item highlight-human">
+                    <div class="tech-label">6) Excepciones y casos límite</div>
+                    <div class="tech-value">
+                      <ul>
+                        <li><strong>Validación de disponibilidad:</strong> Se restringe el formato a <code>desde: hh:mm hasta: hh:mm</code> (ej. <code>08:00 hasta 12:00</code>), validando horas 00-23, minutos 00-59 y que la hora inicial sea estrictamente anterior a la final <em>(decisión del grupo)</em>.</li>
+                        <li><strong>Reevaluación de R1:</strong> Una vez completados los datos faltantes, el agente vuelve a evaluar R1 automáticamente sin reiniciar el proceso <em>(decisión del grupo)</em>.</li>
+                        <li>Si los datos están completos desde el inicio, R2 no se activa y continúa directamente con R1.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tech-item highlight-human" style="grid-column: 1 / -1;">
+                    <div class="tech-label">7) Intervención humana</div>
+                    <div class="tech-value">
+                      <p><strong>El estudiante ingresa los datos faltantes:</strong> La carga de información debe ser realizada personalmente por el usuario en el formulario (y, si lo requiere, puede solicitar orientación a un tutor académico).</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
 
 
     <!-- =========================================================================
-         6. SECCIÓN DESPLEGABLES (ACORDEONES DE DETALLE TÉCNICO)
+         5. SECCIÓN DECISIONES PROPIAS DEL GRUPO (SUPUESTOS NO DEFINIDOS POR R1 NI R2)
          ========================================================================= -->
-    <section id="detalle-tecnico" class="section section-alt">
+    <section id="decisiones-grupo" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Especificación Técnica</span>
-          <h2 class="section-title">Detalle Técnico de cada Propuesta</h2>
+          <span class="section-tag section-tag-amber">Extensión Arquitectónica</span>
+          <h2 class="section-title">Decisiones Propias del Grupo 32</h2>
           <p class="section-lead">
-            Paneles desplegables accesibles por clic y teclado (<kbd>Enter</kbd> / <kbd>Espacio</kbd> / flechas de dirección), con todo el detalle de entradas, decisiones, acciones, resultados, excepciones y decisiones del grupo.
+            Distinción explícita de los supuestos y decisiones agregadas por el equipo que <strong>NO están definidos por las sentencias originales R1 ni R2</strong>:
           </p>
         </div>
 
-        <div class="accordion-group">
-          
-          <!-- Acordeón Propuesta 1 (R1) -->
-          <div class="accordion-item" data-flow="r1">
-            <button type="button" class="accordion-trigger" id="accordion-trigger-r1" aria-expanded="false" aria-controls="accordion-panel-r1">
-              <span class="trigger-title">
-                <span class="flow-pill">Flujo 1</span>
-                <span>Ficha Técnica: Propuesta 1 · Buscador inteligente (R1 · p ∧ q ∧ r)</span>
-              </span>
-              <span class="trigger-icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-panel" id="accordion-panel-r1" role="region" aria-labelledby="accordion-trigger-r1" hidden>
-              <div class="technical-grid">
-                
-                <div class="tech-item">
-                  <div class="tech-label">1) Datos de entrada</div>
-                  <div class="tech-value">
-                    <p>Tema de estudio, disponibilidad y modalidad.</p>
-                  </div>
-                </div>
-
-                <div class="tech-item">
-                  <div class="tech-label">2) Decisión</div>
-                  <div class="tech-value">
-                    <p>El agente comprueba si los tres datos están completos (<code class="formula-chip">p ∧ q ∧ r</code>).</p>
-                  </div>
-                </div>
-
-                <div class="tech-item">
-                  <div class="tech-label">3) Acción propuesta</div>
-                  <div class="tech-value">
-                    <p>Si están completos, consulta la base de datos de perfiles de StudyMatch y busca estudiantes con condiciones compatibles.</p>
-                  </div>
-                </div>
-
-                <div class="tech-item">
-                  <div class="tech-label">4) Herramienta necesaria</div>
-                  <div class="tech-value">
-                    <p>Base de datos de perfiles de StudyMatch.</p>
-                  </div>
-                </div>
-
-                <div class="tech-item">
-                  <div class="tech-label">5) Resultado esperado</div>
-                  <div class="tech-value">
-                    <p>El sistema devuelve una lista de compañeros compatibles para que el estudiante pueda elegir.</p>
-                  </div>
-                </div>
-
-                <div class="tech-item highlight-human">
-                  <div class="tech-label">6) Excepciones e intervención humana</div>
-                  <div class="tech-value">
-                    <ul>
-                      <li>Si falta algún dato, se deriva al Flujo 2.</li>
-                      <li>Si no se encuentran compañeros compatibles, se informa al estudiante y se le ofrecen alternativas <em>(decisión del grupo)</em>.</li>
-                      <li><strong>Intervención humana:</strong> El estudiante decide con quién desea conectarse.</li>
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
+        <div class="decisions-container">
+          <div class="grid-two-columns">
+            
+            <div class="card decision-card">
+              <div class="decision-badge">Decisión 1</div>
+              <h3 class="decision-title">Volver a evaluar R1</h3>
+              <p class="decision-text">
+                Después de que el estudiante completa los datos faltantes en R2, <strong>el agente verifica nuevamente si los tres datos están completos</strong> para enlazar automáticamente con la búsqueda de R1 sin requerir recargar la página.
+              </p>
             </div>
+
+            <div class="card decision-card">
+              <div class="decision-badge">Decisión 2</div>
+              <h3 class="decision-title">Sin coincidencias</h3>
+              <p class="decision-text">
+                Si la base de datos de perfiles no encuentra compañeros compatibles con esas condiciones, el sistema <strong>informa al estudiante y le ofrece alternativas</strong> (por ejemplo, sugerir ampliar franjas horarias o derivar a orientación humana).
+              </p>
+            </div>
+
+            <div class="card decision-card">
+              <div class="decision-badge">Decisión 3</div>
+              <h3 class="decision-title">Disponibilidad inválida</h3>
+              <p class="decision-text">
+                El sistema valida el formato horario ingresado; si detecta una estructura inválida, <strong>informa el error y solicita corregirlo</strong> antes de evaluar la completitud del perfil.
+              </p>
+            </div>
+
+            <div class="card decision-card">
+              <div class="decision-badge">Decisión 4</div>
+              <h3 class="decision-title">Elección de compañeros</h3>
+              <p class="decision-text">
+                El sistema no empareja ni envía invitaciones de manera arbitraria; <strong>el estudiante decide personalmente con quién desea conectarse</strong> a partir de la lista de resultados compatibles (intervención humana decisiva).
+              </p>
+            </div>
+
           </div>
 
-          <!-- Acordeón Propuesta 2 (R2) -->
-          <div class="accordion-item" data-flow="r2">
-            <button type="button" class="accordion-trigger" id="accordion-trigger-r2" aria-expanded="false" aria-controls="accordion-panel-r2">
-              <span class="trigger-title">
-                <span class="flow-pill flow-pill-amber">Flujo 2</span>
-                <span>Ficha Técnica: Propuesta 2 · Asistente de perfil (R2 · ¬p ∨ ¬q ∨ ¬r)</span>
-              </span>
-              <span class="trigger-icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-panel" id="accordion-panel-r2" role="region" aria-labelledby="accordion-trigger-r2" hidden>
-              <div class="technical-grid">
-                
-                <div class="tech-item">
-                  <div class="tech-label">1) Datos de entrada</div>
-                  <div class="tech-value">
-                    <p>Tema de estudio, disponibilidad y modalidad.</p>
-                  </div>
-                </div>
-
-                <div class="tech-item">
-                  <div class="tech-label">2) Decisión</div>
-                  <div class="tech-value">
-                    <p>El agente verifica si falta al menos uno de los tres datos (<code class="formula-chip chip-amber">¬p ∨ ¬q ∨ ¬r</code>).</p>
-                  </div>
-                </div>
-
-                <div class="tech-item">
-                  <div class="tech-label">3) Acción propuesta</div>
-                  <div class="tech-value">
-                    <p>Si falta información, identifica los campos incompletos, solicita completarlos y explica por qué todavía no puede realizar la búsqueda.</p>
-                  </div>
-                </div>
-
-                <div class="tech-item">
-                  <div class="tech-label">4) Herramienta necesaria</div>
-                  <div class="tech-value">
-                    <p>Formulario de ingreso de datos de StudyMatch. No necesita consultar la base de datos de compañeros.</p>
-                  </div>
-                </div>
-
-                <div class="tech-item">
-                  <div class="tech-label">5) Resultado esperado</div>
-                  <div class="tech-value">
-                    <p>El estudiante sabe qué información falta y puede completarla para continuar.</p>
-                  </div>
-                </div>
-
-                <div class="tech-item highlight-human">
-                  <div class="tech-label">6) Excepciones e intervención humana</div>
-                  <div class="tech-value">
-                    <ul>
-                      <li><strong>Intervención humana:</strong> El estudiante debe ingresar personalmente los datos faltantes.</li>
-                      <li>Si los datos están completos, R2 no se activa y se continúa con R1.</li>
-                      <li>Una vez completados los datos, el agente vuelve a evaluar R1 <em>(decisión del grupo)</em>.</li>
-                      <li>Si la disponibilidad tiene un formato inválido, se informa el error y se solicita corregirlo <em>(decisión del grupo)</em>.</li>
-                      <li>El formato permitido es <code>desde: hh:mm hasta: hh:mm</code> (por ejemplo, <code>08:00 hasta 12:00</code>), restringiendo caracteres y formatos distintos <em>(decisión del grupo)</em>.</li>
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
-            </div>
+          <!-- Tabla Comparativa de Decisiones vs Sentencias Originales -->
+          <div class="table-wrapper">
+            <table class="decision-table" aria-label="Tabla de supuestos y decisiones propias del Equipo 32">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 25%;">Decisión / Caso límite</th>
+                  <th scope="col" style="width: 45%;">Criterio adoptado por el Equipo 32</th>
+                  <th scope="col" style="width: 30%;">Justificación pedagógica y técnica</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Reevaluación de R1</strong></td>
+                  <td>Una vez completados los datos faltantes en R2, el agente reevalúa automáticamente la condición de R1.</td>
+                  <td>Evita fricciones y no obliga al usuario a reiniciar o recargar manualmente la página.</td>
+                </tr>
+                <tr>
+                  <td><strong>Búsqueda sin coincidencias</strong></td>
+                  <td>Si no hay perfiles compatibles, el agente informa amablemente y sugiere alternativas de ajuste.</td>
+                  <td>R1 no define qué hacer ante cero resultados; el equipo diseñó una respuesta guiada constructiva.</td>
+                </tr>
+                <tr>
+                  <td><strong>Validación de disponibilidad</strong></td>
+                  <td>Restringe formato a <code>desde: hh:mm hasta: hh:mm</code> comprobando <code>h_ini &lt; h_fin</code>.</td>
+                  <td>Garantiza coherencia de datos previa a la búsqueda y previene incongruencias temporales.</td>
+                </tr>
+                <tr>
+                  <td><strong>Selección de compañeros</strong></td>
+                  <td>El sistema presenta compatibilidades, pero la conexión final siempre la decide el estudiante.</td>
+                  <td>Preserva la autonomía del usuario y evita emparejamientos forzados o intrusivos.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
+          <!-- Aclaración Importante sobre Validación de Disponibilidad -->
+          <div class="card important-notice-card">
+            <div class="notice-header">
+              <span class="notice-icon" aria-hidden="true">⚠️</span>
+              <h3 class="notice-title">Aclaración Importante sobre la Disponibilidad Horaria</h3>
+            </div>
+            <p class="notice-body">
+              La restricción de caracteres y formato de disponibilidad (<code>desde: hh:mm hasta: hh:mm</code>, por ejemplo <code>08:00 hasta 12:00</code>) es una <strong>propuesta adicional de diseño del grupo</strong> y no una condición contemplada por las sentencias originales de R1 ni R2.
+            </p>
+            <p class="notice-body">
+              Asimismo, se determinó que <strong>no alcanza únicamente con validar caracteres alfanuméricos</strong>: el sistema debe comprobar de forma lógica que las horas y minutos sean válidos (formato de 24 horas entre 00:00 y 23:59) y verificar que <strong>la hora inicial sea estrictamente anterior a la hora final</strong> (por ejemplo: <code>08:00 hasta 12:00</code> es válido; <code>25:00</code> o <code>14:00 hasta 09:00</code> son catalogados como inválidos).
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
+
+    <!-- Modal Accesible para Diagramas de Flujo Ampliados -->
+    <div 
+      id="diagram-modal" 
+      class="modal-backdrop" 
+      role="dialog" 
+      aria-modal="true" 
+      aria-labelledby="modal-diagram-title" 
+      hidden
+    >
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="flow-pill" id="modal-diagram-badge">Flujo Ampliado</span>
+            <h3 id="modal-diagram-title" class="modal-title">Vista Ampliada del Diagrama</h3>
+          </div>
+          <button 
+            type="button" 
+            id="modal-close-btn" 
+            class="modal-close-btn" 
+            aria-label="Cerrar modal (Tecla Escape)"
+            title="Cerrar vista ampliada (Escape)"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body" id="modal-diagram-body" tabindex="0" role="region" aria-label="Contenido del diagrama ampliado con scroll habilitado">
+          <!-- El SVG ampliado se inyecta dinámicamente aquí -->
+        </div>
+
+        <div class="modal-footer">
+          <div class="modal-tip">
+            <span class="tip-icon" aria-hidden="true">💡</span>
+            <span>Tip: Puedes desplazarte con el mouse, scroll táctil o presionar <kbd>Esc</kbd> / hacer clic fuera para cerrar.</span>
+          </div>
+          <button type="button" class="btn-close-modal-footer modal-close-action">
+            Cerrar vista
+          </button>
+        </div>
+      </div>
+    </div>
 
   </main>
 

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" role="img" aria-label="Logotipo oficial StudyMatch">
+  <defs>
+    <linearGradient id="smGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="10" width="60" height="60" rx="14" fill="url(#smGrad)"/>
+  <text x="36" y="47" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28">SM</text>
+  <circle cx="54" cy="22" r="5" fill="#38bdf8"/>
+  <text x="82" y="48" fill="#1e3a8a" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" letter-spacing="-0.5">StudyMatch<tspan fill="#059669">.</tspan></text>
+  <text x="84" y="65" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10" letter-spacing="1.5">EDUCACIÓN &amp; COLABORACIÓN</text>
+</svg>
