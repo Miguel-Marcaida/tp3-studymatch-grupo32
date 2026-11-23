@@ -767,19 +767,21 @@
                 </g>
 
                 <!-- Conector 5 -> 6 -->
-                <line x1="500" y1="498" x2="500" y2="534" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
+                <line x1="500" y1="498" x2="500" y2="520" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
 
-                <!-- 6. INTERVENCIÓN HUMANA: EL ESTUDIANTE COMPLETA LOS DATOS -->
-                <g class="flow-node" transform="translate(240, 534)" filter="url(#shadow-node)">
-                  <rect width="520" height="74" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5" stroke-dasharray="5 3"/>
-                  <text x="260" y="26" text-anchor="middle" fill="#c2410c" font-weight="900" font-size="12.5">👤 INTERVENCIÓN HUMANA</text>
-                  <text x="260" y="45" text-anchor="middle" fill="#0f172a" font-size="11.5">El estudiante ingresa la información faltante personalmente</text>
-                  <text x="260" y="60" text-anchor="middle" fill="#7c2d12" font-size="10.5">(y si lo requiere, puede pedir orientación a un tutor)</text>
+                <!-- 6. ACCIÓN DEL ESTUDIANTE E INTERVENCIÓN HUMANA (DECISIÓN DEL GRUPO 32) -->
+                <g class="flow-node" transform="translate(200, 520)" filter="url(#shadow-node)">
+                  <rect width="600" height="98" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5" stroke-dasharray="5 3"/>
+                  <text x="300" y="24" text-anchor="middle" fill="#b45309" font-weight="900" font-size="12">✍️ ACCIÓN DEL ESTUDIANTE (USUARIO)</text>
+                  <text x="300" y="42" text-anchor="middle" fill="#0f172a" font-size="11.5">Completa los datos requeridos en el formulario para que avance el flujo</text>
+                  <line x1="40" y1="52" x2="560" y2="52" stroke="#fed7aa" stroke-width="1.2"/>
+                  <text x="300" y="70" text-anchor="middle" fill="#c2410c" font-weight="900" font-size="12">👤 INTERVENCIÓN HUMANA [Decisión del Grupo 32]:</text>
+                  <text x="300" y="87" text-anchor="middle" fill="#7c2d12" font-size="11">Opción de pedir orientación a un tutor académico (revisión y criterio de una persona)</text>
                 </g>
 
                 <!-- Bucle de Retorno / Re-evaluación R1 (Decisión del Grupo 32) -->
-                <line x1="240" y1="571" x2="100" y2="571" stroke="#0d9488" stroke-width="2.5"/>
-                <line x1="100" y1="571" x2="100" y2="134" stroke="#0d9488" stroke-width="2.5"/>
+                <line x1="200" y1="569" x2="100" y2="569" stroke="#0d9488" stroke-width="2.5"/>
+                <line x1="100" y1="569" x2="100" y2="134" stroke="#0d9488" stroke-width="2.5"/>
                 <line x1="100" y1="134" x2="260" y2="134" stroke="#0d9488" stroke-width="2.5" marker-end="url(#marker-turquesa)"/>
 
                 <!-- Badge legible rotado sin tapar la línea -->
@@ -791,7 +793,7 @@
                 </g>
 
                 <!-- Conector 6 -> FIN -->
-                <line x1="500" y1="608" x2="500" y2="676" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
+                <line x1="500" y1="618" x2="500" y2="676" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
 
                 <!-- 7. FIN -->
                 <g class="flow-node" transform="translate(370, 676)" filter="url(#shadow-node)">
@@ -863,9 +865,17 @@
                   </div>
 
                   <div class="tech-item highlight-human" style="grid-column: 1 / -1;">
-                    <div class="tech-label">7) Intervención humana</div>
+                    <div class="tech-label">7) Acción del usuario vs. Intervención humana</div>
                     <div class="tech-value">
-                      <p><strong>El estudiante ingresa los datos faltantes:</strong> La carga de información debe ser realizada personalmente por el usuario en el formulario (y, si lo requiere, puede solicitar orientación a un tutor académico).</p>
+                      <p><strong>Diferenciación conceptual fundamental:</strong></p>
+                      <ul style="margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li>
+                          <strong>Acción del estudiante (acción del usuario):</strong> Completar o corregir los campos faltantes (tema, horario, modalidad) en el formulario de la aplicación. Esta acción es imprescindible para que el flujo algorítmico avance y se pueda reevaluar R1, pero es una simple carga de datos por el usuario, sin constituir supervisión ni criterio humano.
+                        </li>
+                        <li>
+                          <strong>Intervención humana (Decisión del grupo):</strong> La opción de solicitar asistencia, orientación pedagógica o acompañamiento personalizado a un <strong>tutor académico humano</strong> para definir temas de estudio o despejar dudas. Esta opción fue incorporada explícitamente como una <em>decisión del Grupo 32</em> (no forma parte de la sentencia original de la regla R2) para asegurar el criterio y la empatía de una persona cuando el estudiante lo requiera.
+                        </li>
+                      </ul>
                     </div>
                   </div>
 
@@ -927,6 +937,14 @@
               </p>
             </div>
 
+            <div class="card decision-card" style="grid-column: 1 / -1;">
+              <div class="decision-badge">Decisión 5</div>
+              <h3 class="decision-title">Tutor académico en R2 y diferenciación conceptual</h3>
+              <p class="decision-text">
+                En R2 se diferenció explícitamente la <strong>acción del estudiante</strong> (completar los datos faltantes en el formulario para que el flujo avance) de la verdadera <strong>intervención humana</strong> (revisión y criterio de una persona). Como decisión propia del Grupo 32, se añadió la opción de que el estudiante pueda <strong>solicitar orientación a un tutor académico</strong> cuando tenga dudas para definir su perfil.
+              </p>
+            </div>
+
           </div>
 
           <!-- Tabla Comparativa de Decisiones vs Sentencias Originales -->
@@ -959,6 +977,11 @@
                   <td><strong>Selección de compañeros</strong></td>
                   <td>El sistema presenta compatibilidades, pero la conexión final siempre la decide el estudiante.</td>
                   <td>Preserva la autonomía del usuario y evita emparejamientos forzados o intrusivos.</td>
+                </tr>
+                <tr>
+                  <td><strong>Orientación con tutor académico en R2</strong></td>
+                  <td>Se incorpora la opción de pedir asistencia a un tutor académico ante perfiles incompletos.</td>
+                  <td>Diferencia la simple acción de carga del usuario de una verdadera intervención humana de criterio y orientación pedagógica.</td>
                 </tr>
               </tbody>
             </table>

@@ -193,6 +193,19 @@ function initMobileMenu() {
     }
   });
 
+  // Soporte de accesibilidad por teclado directo (Enter y Espacio)
+  menuToggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+  });
+
   // Cerrar el menú al hacer clic en cualquiera de sus enlaces
   const navLinks = mainNav.querySelectorAll('.nav-link');
   navLinks.forEach((link) => {
