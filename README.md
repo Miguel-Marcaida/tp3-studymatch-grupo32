@@ -66,8 +66,8 @@ El desarrollo se realizó de manera **100 % agéntica**, sin edición manual de 
 
 ## 5. Repositorio, despliegue y verificación
 
-- **Repositorio del grupo:** `[COMPLETAR_ENLACE_REPOSITORIO]`
-- **Landing publicada (Vercel):** `[COMPLETAR_ENLACE_VERCEL]`
+- **Repositorio del grupo:** https://github.com/Miguel-Marcaida/tp3-studymatch-grupo32
+- **Landing publicada (Vercel):** https://tp3-studymatch-grupo32.vercel.app/
 - **Fecha de entrega:** 26/11/2026
 
 ### Lista de comprobación final (vista *desktop* y ventana sin sesión)
@@ -75,4 +75,4 @@ El desarrollo se realizó de manera **100 % agéntica**, sin edición manual de 
 - [x] Se incluyen las dos sentencias originales sin alterar su redacción, junto con ambas propuestas, sus beneficios y los supuestos del grupo.
 - [x] Los dos diagramas de flujo (`R1` y `R2`) son legibles, tienen flechas y ramas rotuladas e incluyen intervención humana.
 - [x] Los paneles desplegables abren y cierran correctamente tanto con clic como mediante teclado (`Enter` / `Espacio`).
-- [ ] Enlaces de repositorio y landing en Vercel verificados en ventana de incógnito (sin sesión iniciada) mostrando la versión final.
+- [x] Enlaces de repositorio y landing en Vercel verificados en ventana de incógnito (sin sesión iniciada) mostrando la versión final.
