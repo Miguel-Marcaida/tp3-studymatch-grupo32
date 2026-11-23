@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudyMatch (IFTS 16) · Propuestas agénticas para el Bloque S13-A: Perfil y búsqueda. Presentado por Equipo 32 - Desarrollo de Sistemas Web Front End (IFTS 29).">
+  <title>StudyMatch · Bloque S13-A: Perfil y Búsqueda | Equipo 32 (IFTS 29)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Enlace accesible de salto al contenido principal -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Barra de Navegación Institucional con Switcher de Tema -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="brand-group">
+        <a href="#presentacion" class="header-logo-link">
+          <span class="header-badge academic-badge">IFTS 29 · DSW Front End</span>
+          <span class="header-badge group-badge">Equipo 32</span>
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#presentacion" class="nav-link">Presentación</a></li>
+          <li><a href="#equipo" class="nav-link">Equipo</a></li>
+          <li><a href="#propuestas" class="nav-link">Propuestas</a></li>
+          <li><a href="#decisiones-grupo" class="nav-link">Decisiones del Grupo</a></li>
+          <li><a href="#diagramas" class="nav-link">Diagramas de Flujo</a></li>
+          <li><a href="#detalle-tecnico" class="nav-link">Detalle Técnico</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón de Alternancia de Tema (Modo Claro / Modo Oscuro) -->
+      <div class="theme-switch-wrapper">
+        <button 
+          type="button" 
+          id="theme-toggle" 
+          class="theme-toggle-btn" 
+          aria-label="Cambiar tema: Oscuro / Claro" 
+          aria-pressed="false"
+          title="Alternar entre Modo Claro (Fondo Marfil Limpio y Cobalto) y Modo Oscuro (Azul Carbón, Turquesa y Dorado)"
+        >
+          <span class="theme-icon" aria-hidden="true">☀️</span>
+          <span class="theme-text">Modo Claro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main id="main-content">
+
+    <!-- =========================================================================
+         1. SECCIÓN PRESENTACIÓN
+         ========================================================================= -->
+    <section id="presentacion" class="section hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="tag startup-tag">Startup: StudyMatch. (Origen IFTS 16)</span>
+            <span class="tag group-tag">IFTS 29 · Equipo 32</span>
+            <span class="tag block-tag">Bloque: Perfil y búsqueda · S13-A</span>
+          </div>
+
+          <h1 class="hero-title">StudyMatch<span class="brand-dot">.</span></h1>
+          <p class="hero-slogan">&ldquo;Conectamos estudiantes para estudiar juntos.&rdquo;</p>
+          <p class="hero-description">
+            StudyMatch es una red que conecta estudiantes según sus materias, intereses, necesidades y disponibilidad.
+          </p>
+
+          <div class="card service-overview-card">
+            <h2 class="card-heading">Necesidad que Resuelve</h2>
+            <p class="card-body-text">
+              Facilita encontrar compañeros de estudio que compartan intereses, horarios y modalidades compatibles, evitando que los estudiantes tengan que buscarlos manualmente de forma desorganizada.
+            </p>
+            <div class="scope-alert">
+              <span class="scope-icon" aria-hidden="true">💡</span>
+              <p>
+                <strong>Alcance pedagógico:</strong> Modelado conceptual de dos propuestas agénticas para el TP3. La aplicación no integra IA en vivo, ni APIs reales, ni backend en producción.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <!-- Tarjeta protectora que asegura encuadre, nitidez y fondo armónico para el logo en ambos temas -->
+          <figure class="brand-logo-card" role="group" aria-label="Logotipo oficial de StudyMatch.">
+            <div class="brand-logo-frame">
+              <img 
+                src="assets/logo-studymatch.png" 
+                alt="Logotipo oficial de StudyMatch. (creada por estudiantes del IFTS 16), red de educación y colaboración estudiantil" 
+                class="brand-logo-img" 
+                width="280" 
+                height="280" 
+                loading="eager"
+              >
+            </div>
+            <figcaption class="brand-logo-caption">
+              <span class="badge startup-badge">Logo Oficial · IFTS 16</span>
+              <span class="caption-text">Identidad visual de la startup StudyMatch.</span>
+              <small class="caption-subtext">Rubro: Educación y colaboración</small>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         2. SECCIÓN INTEGRANTES DEL EQUIPO 32
+         ========================================================================= -->
+    <section id="equipo" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Equipo de Trabajo</span>
+          <h2 class="section-title">Integrantes del Equipo 32 (IFTS 29)</h2>
+          <p class="section-lead">
+            Estudiantes a cargo del análisis, especificación de requerimientos y modelado de propuestas agénticas para el Bloque S13-A.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar">SB</div>
+            <div class="team-info">
+              <h3 class="team-name">Sergio Cesar Barrientos</h3>
+              <span class="team-role">Lógica Proposicional & Flujos</span>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">CS</div>
+            <div class="team-info">
+              <h3 class="team-name">Carolina Silva Cotto</h3>
+              <span class="team-role">Diseño Front End & Temas</span>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">MM</div>
+            <div class="team-info">
+              <h3 class="team-name">Miguel Angel Marcaida</h3>
+              <span class="team-role">Ingeniería de Requerimientos</span>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">MS</div>
+            <div class="team-info">
+              <h3 class="team-name">Mariana Sosa</h3>
+              <span class="team-role">Modelado de Diagramas SVG</span>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">KS</div>
+            <div class="team-info">
+              <h3 class="team-name">Karina Sanchez</h3>
+              <span class="team-role">Casos Límite & Accesibilidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         3. SECCIÓN SENTENCIAS Y PROPUESTAS AGÉNTICAS
+         ========================================================================= -->
+    <section id="propuestas" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Diseño Agéntico</span>
+          <h2 class="section-title">Sentencias y Propuestas Agénticas</h2>
+          <p class="section-lead">
+            Formalización de las dos reglas asignadas al Bloque S13-A, su análisis lógico y la especificación de los agentes asistentes.
+          </p>
+        </div>
+
+        <div class="grid-two-columns">
+          
+          <!-- TARJETA PROPUESTA 1 (R1) -->
+          <article class="card rule-card" id="card-r1">
+            <div class="card-badge">Propuesta 1 · R1</div>
+            
+            <div class="original-sentence-box">
+              <span class="box-label">Sentencia original (R1):</span>
+              <blockquote class="exact-quote">
+                &ldquo;Si el estudiante completó tema de estudio, disponibilidad y modalidad, el sistema busca compañeros con esas condiciones compatibles.&rdquo;
+              </blockquote>
+            </div>
+
+            <div class="formal-spec-box">
+              <h4 class="spec-heading">Formalización Lógica:</h4>
+              <ul class="spec-list">
+                <li><span class="prop-var">p</span> = El estudiante completó tema de estudio</li>
+                <li><span class="prop-var">q</span> = El estudiante completó disponibilidad</li>
+                <li><span class="prop-var">r</span> = El estudiante completó modalidad</li>
+                <li><strong>Condición lógica:</strong> <code class="formula-chip">p ∧ q ∧ r</code> (los tres datos completos).</li>
+              </ul>
+            </div>
+
+            <div class="proposal-solution-box">
+              <div class="proposal-badge">
+                <span class="badge-icon" aria-hidden="true">⚡</span> Propuesta 1
+              </div>
+              <h3 class="proposal-title">Buscador Inteligente</h3>
+              <p class="proposal-text">
+                Un agente que recibe el perfil del estudiante, verifica que los tres datos estén completos (<code class="formula-inline">p ∧ q ∧ r</code>) y, si se cumple la condición, consulta la base de datos de perfiles de StudyMatch para encontrar estudiantes con condiciones compatibles.
+              </p>
+              
+              <div class="benefit-card">
+                <strong>✨ Beneficio:</strong> Facilita encontrar compañeros para estudiar de forma rápida y evita que los estudiantes tengan que buscarlos manualmente. Ahorra tiempo y permite conectar personas con intereses, horarios y modalidades compatibles.
+              </div>
+
+              <div class="agent-workflow-card">
+                <h4 class="workflow-title">Mecanismo Concluyente de R1:</h4>
+                <ul class="workflow-bullets">
+                  <li><strong>Herramienta necesaria:</strong> Base de datos de perfiles de StudyMatch.</li>
+                  <li><strong>Resultado esperado:</strong> El sistema devuelve una lista de compañeros compatibles para que el estudiante pueda elegir.</li>
+                  <li><strong>Intervención humana:</strong> El estudiante decide con quién desea conectarse de la lista presentada.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- TARJETA PROPUESTA 2 (R2) -->
+          <article class="card rule-card" id="card-r2">
+            <div class="card-badge card-badge-amber">Propuesta 2 · R2</div>
+            
+            <div class="original-sentence-box original-box-amber">
+              <span class="box-label label-amber">Sentencia original (R2):</span>
+              <blockquote class="exact-quote">
+                &ldquo;Si falta alguno de esos datos, el sistema solicita completarlo y explica que todavía no puede realizar la búsqueda.&rdquo;
+              </blockquote>
+            </div>
+
+            <div class="formal-spec-box">
+              <h4 class="spec-heading">Formalización Lógica:</h4>
+              <ul class="spec-list">
+                <li><span class="prop-var">p</span> = completó tema · <span class="prop-var">q</span> = completó disponibilidad · <span class="prop-var">r</span> = completó modalidad</li>
+                <li><strong>Condición lógica:</strong> <code class="formula-chip chip-amber">¬p ∨ ¬q ∨ ¬r</code> (se activa con que falte al menos un dato).</li>
+              </ul>
+            </div>
+
+            <div class="proposal-solution-box proposal-box-amber">
+              <div class="proposal-badge badge-amber">
+                <span class="badge-icon" aria-hidden="true">⚡</span> Propuesta 2
+              </div>
+              <h3 class="proposal-title">Asistente de Perfil</h3>
+              <p class="proposal-text">
+                Un agente que revisa los datos ingresados por el estudiante, detecta cuáles faltan y solicita que los complete. También explica que todavía no puede realizar la búsqueda porque necesita los tres datos para continuar.
+              </p>
+              
+              <div class="benefit-card">
+                <strong>✨ Beneficio:</strong> Evita búsquedas vacías o engañosas antes de contar con toda la información necesaria. Orienta al estudiante sobre qué datos le faltan completar y le explica con claridad por qué aún no se puede realizar la búsqueda.
+              </div>
+
+              <div class="agent-workflow-card">
+                <h4 class="workflow-title">Mecanismo Concluyente de R2:</h4>
+                <ul class="workflow-bullets">
+                  <li><strong>Herramienta necesaria:</strong> Formulario de ingreso de datos de StudyMatch. No necesita consultar la base de datos de compañeros.</li>
+                  <li><strong>Resultado esperado:</strong> El estudiante sabe qué información falta y puede completarla para continuar.</li>
+                  <li><strong>Intervención humana:</strong> El estudiante debe ingresar personalmente los datos faltantes (y puede solicitar orientación).</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         4. SECCIÓN DECISIONES PROPIAS DEL GRUPO (SUPUESTOS NO DEFINIDOS POR R1 NI R2)
+         ========================================================================= -->
+    <section id="decisiones-grupo" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag section-tag-amber">Extensión Arquitectónica</span>
+          <h2 class="section-title">Decisiones Propias del Grupo 32</h2>
+          <p class="section-lead">
+            Distinción explícita de los supuestos y decisiones agregadas por el equipo que <strong>NO están definidos por las sentencias originales R1 ni R2</strong>:
+          </p>
+        </div>
+
+        <div class="decisions-container">
+          <div class="grid-two-columns">
+            
+            <div class="card decision-card">
+              <div class="decision-badge">Decisión 1</div>
+              <h3 class="decision-title">Volver a evaluar R1</h3>
+              <p class="decision-text">
+                Después de que el estudiante completa los datos faltantes en R2, <strong>el agente verifica nuevamente si los tres datos están completos</strong> para enlazar automáticamente con la búsqueda de R1 sin requerir recargar la página.
+              </p>
+            </div>
+
+            <div class="card decision-card">
+              <div class="decision-badge">Decisión 2</div>
+              <h3 class="decision-title">Sin coincidencias</h3>
+              <p class="decision-text">
+                Si la base de datos de perfiles no encuentra compañeros compatibles con esas condiciones, el sistema <strong>informa al estudiante y le ofrece alternativas</strong> (por ejemplo, sugerir ampliar franjas horarias o derivar a orientación humana).
+              </p>
+            </div>
+
+            <div class="card decision-card">
+              <div class="decision-badge">Decisión 3</div>
+              <h3 class="decision-title">Disponibilidad inválida</h3>
+              <p class="decision-text">
+                El sistema valida el formato horario ingresado; si detecta una estructura inválida, <strong>informa el error y solicita corregirlo</strong> antes de evaluar la completitud del perfil.
+              </p>
+            </div>
+
+            <div class="card decision-card">
+              <div class="decision-badge">Decisión 4</div>
+              <h3 class="decision-title">Elección de compañeros</h3>
+              <p class="decision-text">
+                El sistema no empareja ni envía invitaciones de manera arbitraria; <strong>el estudiante decide personalmente con quién desea conectarse</strong> a partir de la lista de resultados compatibles (intervención humana decisiva).
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Aclaración Importante sobre Validación de Disponibilidad -->
+          <div class="card important-notice-card">
+            <div class="notice-header">
+              <span class="notice-icon" aria-hidden="true">⚠️</span>
+              <h3 class="notice-title">Aclaración Importante sobre la Disponibilidad Horaria</h3>
+            </div>
+            <p class="notice-body">
+              La restricción de caracteres y formato de disponibilidad (<code>desde: hh:mm hasta: hh:mm</code>, por ejemplo <code>08:00 hasta 12:00</code>) es una <strong>propuesta adicional de diseño del grupo</strong> y no una condición contemplada por las sentencias originales de R1 ni R2.
+            </p>
+            <p class="notice-body">
+              Asimismo, se determinó que <strong>no alcanza únicamente con validar caracteres alfanuméricos</strong>: el sistema debe comprobar de forma lógica que las horas y minutos sean válidos (formato de 24 horas entre 00:00 y 23:59) y verificar que <strong>la hora inicial sea estrictamente anterior a la hora final</strong> (por ejemplo: <code>08:00 hasta 12:00</code> es válido; <code>25:00</code> o <code>14:00 hasta 09:00</code> son catalogados como inválidos).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         5. SECCIÓN DIAGRAMAS DE FLUJO VECTORIALES (SVG CLAROS Y MODERNOS)
+         ========================================================================= -->
+    <section id="diagramas" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Modelado Visual</span>
+          <h2 class="section-title">Diagramas de Flujo de los Procesos Agénticos</h2>
+          <p class="section-lead">
+            Recorridos claros y legibles para desktop: inicio, entradas, decisiones con flechas y etiquetas SÍ / NO, acciones, resultados, intervención humana y decisiones del grupo claramente identificadas.
+          </p>
+        </div>
+
+        <div class="diagrams-stack">
+
+          <!-- ==================== DIAGRAMA 1 (R1) ==================== -->
+          <article class="card diagram-card" id="diagram-r1">
+            <div class="diagram-card-header">
+              <div>
+                <span class="flow-pill-badge">Flujo 1 · Propuesta 1</span>
+                <h3 class="diagram-heading">Buscador Inteligente (R1 · Condición: p ∧ q ∧ r)</h3>
+              </div>
+              <span class="status-badge status-success">Condición p ∧ q ∧ r = SÍ</span>
+            </div>
+
+            <div class="diagram-note">
+              <span class="note-icon" aria-hidden="true">ℹ️</span>
+              <p>
+                <strong>Flujo 1:</strong> Inicio (estudiante envía perfil) → Entrada: tema, disponibilidad, modalidad → ¿Los tres datos están completos? → <strong>SÍ:</strong> buscar compañeros compatibles en BD StudyMatch → mostrar resultados → el estudiante elige con quién conectar → fin. <strong>NO:</strong> pasa al Flujo 2. <em>(Los recuadros con borde ámbar y etiqueta especial señalan decisiones propias del Grupo 32).</em>
+              </p>
+            </div>
+
+            <!-- SVG 1: Limpio, ordenado, moderno con paleta del logo (azul, turquesa, dorado, azul carbón) -->
+            <div class="svg-diagram-wrapper" role="region" aria-label="Diagrama de flujo del Buscador Inteligente R1">
+              <svg viewBox="0 0 1000 780" class="flowchart-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="desc-svg-r1">
+                <title id="title-svg-r1">Diagrama de Flujo 1 · Propuesta 1 (R1) - Buscador Inteligente</title>
+                <desc id="desc-svg-r1">Diagrama del buscador inteligente que valida tema, disponibilidad y modalidad (p ∧ q ∧ r), consulta la BD de perfiles y permite al alumno elegir compañeros.</desc>
+
+                <defs>
+                  <!-- Marcadores de flechas bien visibles con la paleta de StudyMatch -->
+                  <marker id="marker-carbon" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0f172a"/>
+                  </marker>
+                  <marker id="marker-turquesa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0d9488"/>
+                  </marker>
+                  <marker id="marker-azul" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1d4ed8"/>
+                  </marker>
+                  <marker id="marker-dorado" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+                  </marker>
+                  <!-- Sombra suave para los nodos -->
+                  <filter id="shadow-node" x="-5%" y="-5%" width="110%" height="115%">
+                    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.08"/>
+                  </filter>
+                </defs>
+
+                <!-- 1. INICIO (Píldora Azul Carbón con Turquesa) -->
+                <g class="flow-node" transform="translate(370, 20)" filter="url(#shadow-node)">
+                  <rect width="260" height="46" rx="23" fill="#0f172a" stroke="#0d9488" stroke-width="2.5"/>
+                  <text x="130" y="28" text-anchor="middle" fill="#ffffff" font-weight="800" font-size="13">● INICIO: Estudiante envía perfil</text>
+                </g>
+
+                <!-- Conector 1 -> 2 (Línea Azul Carbón) -->
+                <line x1="500" y1="66" x2="500" y2="102" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
+
+                <!-- 2. DATOS DE ENTRADA (Paralelogramo estilizado en Azul Cobalto Suave) -->
+                <g class="flow-node" transform="translate(260, 102)" filter="url(#shadow-node)">
+                  <polygon points="25,0 455,0 430,60 0,60" fill="#f0f9ff" stroke="#0284c7" stroke-width="2"/>
+                  <text x="225" y="26" text-anchor="middle" fill="#0369a1" font-weight="900" font-size="12">📥 DATOS DE ENTRADA</text>
+                  <text x="225" y="45" text-anchor="middle" fill="#0f172a" font-size="11.5">Tema de estudio (p) + Disponibilidad (q) + Modalidad (r)</text>
+                </g>
+
+                <!-- Conector 2 -> 3 -->
+                <line x1="500" y1="162" x2="500" y2="198" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
+
+                <!-- 3. DECISIÓN 1: VALIDACIÓN DE FORMATO HORARIO (Decisión del Grupo 32) -->
+                <g class="flow-node" transform="translate(320, 198)" filter="url(#shadow-node)">
+                  <!-- Rombo Dorado -->
+                  <polygon points="180,0 360,45 180,90 0,45" fill="#fffbeb" stroke="#d97706" stroke-width="2.5"/>
+                  <text x="180" y="32" text-anchor="middle" fill="#92400e" font-weight="800" font-size="11.5">¿Formato horario y rango válido?</text>
+                  <text x="180" y="49" text-anchor="middle" fill="#78350f" font-size="10.5">desde: hh:mm hasta: hh:mm (h_ini &lt; h_fin)</text>
+                  <!-- Badge identificador de decisión del grupo -->
+                  <rect x="75" y="58" width="210" height="18" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+                  <text x="180" y="71" text-anchor="middle" fill="#92400e" font-weight="800" font-size="9.5">★ Decisión propia del Grupo 32</text>
+                </g>
+
+                <!-- Rama NO de Formato Inválido (Salida a la Izquierda) -->
+                <line x1="320" y1="243" x2="185" y2="243" stroke="#d97706" stroke-width="2.5" marker-end="url(#marker-dorado)"/>
+                <!-- Etiqueta NO despejada (sin tapar líneas) -->
+                <g transform="translate(230, 218)">
+                  <rect width="38" height="22" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+                  <text x="19" y="15" text-anchor="middle" fill="#991b1b" font-weight="900" font-size="11">NO</text>
+                </g>
+
+                <!-- Bloque de Error de Formato (Decisión del Grupo 32) -->
+                <g class="flow-node" transform="translate(15, 214)" filter="url(#shadow-node)">
+                  <rect width="170" height="58" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 3"/>
+                  <text x="85" y="24" text-anchor="middle" fill="#991b1b" font-weight="800" font-size="11">Informa Error de Horario</text>
+                  <text x="85" y="42" text-anchor="middle" fill="#7f1d1d" font-size="10">Solicita formato correcto</text>
+                </g>
+
+                <!-- Bucle de retorno tras corregir formato -->
+                <line x1="100" y1="214" x2="100" y2="132" stroke="#d97706" stroke-width="2"/>
+                <line x1="100" y1="132" x2="255" y2="132" stroke="#d97706" stroke-width="2" marker-end="url(#marker-dorado)"/>
+
+                <!-- Rama SÍ de Formato Válido (Hacia abajo) -->
+                <line x1="500" y1="288" x2="500" y2="328" stroke="#0d9488" stroke-width="2.5" marker-end="url(#marker-turquesa)"/>
+                <!-- Etiqueta SÍ despejada -->
+                <g transform="translate(510, 296)">
+                  <rect width="34" height="22" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+                  <text x="17" y="15" text-anchor="middle" fill="#0f766e" font-weight="900" font-size="11">SÍ</text>
+                </g>
+
+                <!-- 4. DECISIÓN 2: CONDICIÓN PRINCIPAL R1 (p ∧ q ∧ r) -->
+                <g class="flow-node" transform="translate(320, 328)" filter="url(#shadow-node)">
+                  <!-- Rombo Turquesa/Azul -->
+                  <polygon points="180,0 360,45 180,90 0,45" fill="#f0fdfa" stroke="#0d9488" stroke-width="2.5"/>
+                  <text x="180" y="36" text-anchor="middle" fill="#0f766e" font-weight="800" font-size="12">¿Los tres datos están completos?</text>
+                  <text x="180" y="56" text-anchor="middle" fill="#0d9488" font-weight="900" font-size="13">Condición R1: p ∧ q ∧ r</text>
+                </g>
+
+                <!-- Rama NO de R1 -> Pasa al Flujo 2 (Salida a la Derecha) -->
+                <line x1="680" y1="373" x2="795" y2="373" stroke="#d97706" stroke-width="2.5" marker-end="url(#marker-dorado)"/>
+                <!-- Etiqueta NO despejada -->
+                <g transform="translate(720, 348)">
+                  <rect width="38" height="22" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+                  <text x="19" y="15" text-anchor="middle" fill="#991b1b" font-weight="900" font-size="11">NO</text>
+                </g>
+
+                <!-- Bloque de Derivación a Flujo 2 -->
+                <g class="flow-node" transform="translate(795, 345)" filter="url(#shadow-node)">
+                  <rect width="185" height="56" rx="8" fill="#fef2f2" stroke="#f87171" stroke-width="2"/>
+                  <text x="92" y="24" text-anchor="middle" fill="#991b1b" font-weight="900" font-size="11.5">PASA AL FLUJO 2</text>
+                  <text x="92" y="42" text-anchor="middle" fill="#7f1d1d" font-size="10.5">Dato faltante: ¬p ∨ ¬q ∨ ¬r</text>
+                </g>
+
+                <!-- Rama SÍ de R1 (Hacia abajo) -->
+                <line x1="500" y1="418" x2="500" y2="456" stroke="#0d9488" stroke-width="2.5" marker-end="url(#marker-turquesa)"/>
+                <!-- Etiqueta SÍ despejada -->
+                <g transform="translate(510, 424)">
+                  <rect width="34" height="22" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+                  <text x="17" y="15" text-anchor="middle" fill="#0f766e" font-weight="900" font-size="11">SÍ</text>
+                </g>
+
+                <!-- 5. ACCIÓN AGÉNTICA: CONSULTA BD STUDYMATCH -->
+                <g class="flow-node" transform="translate(265, 456)" filter="url(#shadow-node)">
+                  <rect width="470" height="64" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2.5"/>
+                  <text x="235" y="26" text-anchor="middle" fill="#0f766e" font-weight="900" font-size="12.5">⚙️ ACCIÓN: CONSULTA BD STUDYMATCH</text>
+                  <text x="235" y="46" text-anchor="middle" fill="#0f172a" font-size="11">Busca estudiantes con tema, disponibilidad y modalidad compatibles</text>
+                </g>
+
+                <!-- Conector 5 -> 6 -->
+                <line x1="500" y1="520" x2="500" y2="556" stroke="#0d9488" stroke-width="2.5" marker-end="url(#marker-turquesa)"/>
+
+                <!-- 6. DECISIÓN 3: ¿COINCIDENCIAS ENCONTRADAS? (Decisión del Grupo 32) -->
+                <g class="flow-node" transform="translate(325, 556)" filter="url(#shadow-node)">
+                  <polygon points="175,0 350,42 175,84 0,42" fill="#fffbeb" stroke="#d97706" stroke-width="2.5"/>
+                  <text x="175" y="32" text-anchor="middle" fill="#92400e" font-weight="800" font-size="11.5">¿Se hallaron compañeros compatibles?</text>
+                  <!-- Badge Grupo 32 -->
+                  <rect x="70" y="52" width="210" height="18" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+                  <text x="175" y="65" text-anchor="middle" fill="#92400e" font-weight="800" font-size="9.5">★ Decisión propia del Grupo 32</text>
+                </g>
+
+                <!-- Rama SÍ de Coincidencias encontradas (Hacia la izquierda) -->
+                <line x1="325" y1="598" x2="215" y2="598" stroke="#0d9488" stroke-width="2.5" marker-end="url(#marker-turquesa)"/>
+                <g transform="translate(250, 573)">
+                  <rect width="34" height="22" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+                  <text x="17" y="15" text-anchor="middle" fill="#0f766e" font-weight="900" font-size="11">SÍ</text>
+                </g>
+
+                <!-- 7A. RESULTADO E INTERVENCIÓN HUMANA: EL ESTUDIANTE ELIGE -->
+                <g class="flow-node" transform="translate(15, 564)" filter="url(#shadow-node)">
+                  <rect width="195" height="68" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+                  <text x="97" y="24" text-anchor="middle" fill="#0f766e" font-weight="900" font-size="11.5">🎯 RESULTADO R1</text>
+                  <text x="97" y="42" text-anchor="middle" fill="#0f172a" font-size="10.5">Devuelve lista de compatibles</text>
+                  <text x="97" y="58" text-anchor="middle" fill="#ea580c" font-weight="800" font-size="10.5">👤 El estudiante elige</text>
+                </g>
+
+                <!-- Conector 7A -> FIN -->
+                <line x1="112" y1="632" x2="112" y2="735" stroke="#0f172a" stroke-width="2.5"/>
+                <line x1="112" y1="735" x2="375" y2="735" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
+
+                <!-- Rama NO de Coincidencias (Hacia la derecha) -->
+                <line x1="675" y1="598" x2="785" y2="598" stroke="#d97706" stroke-width="2.5" marker-end="url(#marker-dorado)"/>
+                <g transform="translate(715, 573)">
+                  <rect width="38" height="22" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+                  <text x="19" y="15" text-anchor="middle" fill="#991b1b" font-weight="900" font-size="11">NO</text>
+                </g>
+
+                <!-- 7B. SIN COINCIDENCIAS: INFORMAR Y OFRECER ALTERNATIVAS (Decisión G32) -->
+                <g class="flow-node" transform="translate(785, 560)" filter="url(#shadow-node)">
+                  <rect width="200" height="76" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2" stroke-dasharray="5 3"/>
+                  <text x="100" y="23" text-anchor="middle" fill="#c2410c" font-weight="900" font-size="11.5">👤 SIN COINCIDENCIAS</text>
+                  <text x="100" y="41" text-anchor="middle" fill="#7c2d12" font-size="10.5">Informa y ofrece alternativas</text>
+                  <text x="100" y="58" text-anchor="middle" fill="#9a3412" font-size="9.5">★ Decisión Grupo 32</text>
+                </g>
+
+                <!-- Conector 7B -> FIN -->
+                <line x1="885" y1="636" x2="885" y2="735" stroke="#0f172a" stroke-width="2.5"/>
+                <line x1="885" y1="735" x2="625" y2="735" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
+
+                <!-- 8. FIN -->
+                <g class="flow-node" transform="translate(385, 712)" filter="url(#shadow-node)">
+                  <rect width="230" height="46" rx="23" fill="#0f172a" stroke="#0d9488" stroke-width="2.5"/>
+                  <text x="115" y="28" text-anchor="middle" fill="#ffffff" font-weight="800" font-size="14">■ FIN</text>
+                </g>
+              </svg>
+            </div>
+          </article>
+
+
+          <!-- ==================== DIAGRAMA 2 (R2) ==================== -->
+          <article class="card diagram-card" id="diagram-r2">
+            <div class="diagram-card-header">
+              <div>
+                <span class="flow-pill-badge pill-amber">Flujo 2 · Propuesta 2</span>
+                <h3 class="diagram-heading">Asistente de Perfil (R2 · Condición: ¬p ∨ ¬q ∨ ¬r)</h3>
+              </div>
+              <span class="status-badge status-warning">Falta dato = SÍ</span>
+            </div>
+
+            <div class="diagram-note">
+              <span class="note-icon" aria-hidden="true">ℹ️</span>
+              <p>
+                <strong>Flujo 2:</strong> Inicio (perfil con datos faltantes) → Entrada: los tres campos → ¿Falta alguno? → <strong>SÍ:</strong> identificar el dato faltante → solicitar completarlo → explicar que todavía no se puede buscar → <em>intervención humana: estudiante ingresa datos faltantes</em> → fin / <strong>re-evalúa R1 (decisión del grupo)</strong>. <strong>NO:</strong> corresponde al Flujo 1.
+              </p>
+            </div>
+
+            <!-- SVG 2: Limpio, ordenado, moderno con paleta del logo (azul, turquesa, dorado, azul carbón) -->
+            <div class="svg-diagram-wrapper" role="region" aria-label="Diagrama de flujo del Asistente de Perfil R2">
+              <svg viewBox="0 0 1000 780" class="flowchart-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="desc-svg-r2">
+                <title id="title-svg-r2">Diagrama de Flujo 2 · Propuesta 2 (R2) - Asistente de Perfil</title>
+                <desc id="desc-svg-r2">Diagrama del asistente de perfil que detecta datos faltantes (¬p ∨ ¬q ∨ ¬r), pausa preventivamente, solicita completar y re-evalúa R1.</desc>
+
+                <!-- 1. INICIO (Píldora Azul Carbón con Turquesa) -->
+                <g class="flow-node" transform="translate(360, 20)" filter="url(#shadow-node)">
+                  <rect width="280" height="46" rx="23" fill="#0f172a" stroke="#0d9488" stroke-width="2.5"/>
+                  <text x="140" y="28" text-anchor="middle" fill="#ffffff" font-weight="800" font-size="13">● INICIO: Perfil con datos faltantes</text>
+                </g>
+
+                <!-- Conector 1 -> 2 -->
+                <line x1="500" y1="66" x2="500" y2="104" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
+
+                <!-- 2. DATOS DE ENTRADA -->
+                <g class="flow-node" transform="translate(265, 104)" filter="url(#shadow-node)">
+                  <polygon points="25,0 445,0 420,60 0,60" fill="#f0f9ff" stroke="#0284c7" stroke-width="2"/>
+                  <text x="222" y="26" text-anchor="middle" fill="#0369a1" font-weight="900" font-size="12">📥 ENTRADA: LOS TRES CAMPOS</text>
+                  <text x="222" y="45" text-anchor="middle" fill="#0f172a" font-size="11.5">Valores ingresados para tema (p), disponibilidad (q) y modalidad (r)</text>
+                </g>
+
+                <!-- Conector 2 -> 3 -->
+                <line x1="500" y1="164" x2="500" y2="200" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
+
+                <!-- 3. DECISIÓN: CONDICIÓN R2 (¿FALTA ALGUNO?) -->
+                <g class="flow-node" transform="translate(315, 200)" filter="url(#shadow-node)">
+                  <!-- Rombo Dorado / Ámbar -->
+                  <polygon points="185,0 370,45 185,90 0,45" fill="#fffbeb" stroke="#d97706" stroke-width="2.5"/>
+                  <text x="185" y="34" text-anchor="middle" fill="#92400e" font-weight="800" font-size="12">¿Falta al menos un dato requerido?</text>
+                  <text x="185" y="54" text-anchor="middle" fill="#dc2626" font-weight="900" font-size="13">Condición R2: ¬p ∨ ¬q ∨ ¬r</text>
+                </g>
+
+                <!-- Rama NO de Decisión (Perfil completo -> va a Flujo 1) -->
+                <line x1="685" y1="245" x2="795" y2="245" stroke="#0d9488" stroke-width="2.5" marker-end="url(#marker-turquesa)"/>
+                <g transform="translate(725, 220)">
+                  <rect width="38" height="22" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+                  <text x="19" y="15" text-anchor="middle" fill="#0f766e" font-weight="900" font-size="11">NO</text>
+                </g>
+
+                <g class="flow-node" transform="translate(795, 217)" filter="url(#shadow-node)">
+                  <rect width="185" height="56" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+                  <text x="92" y="24" text-anchor="middle" fill="#0f766e" font-weight="900" font-size="11.5">CORRESPONDE A FLUJO 1</text>
+                  <text x="92" y="42" text-anchor="middle" fill="#0f172a" font-size="10.5">Perfil completo (p ∧ q ∧ r)</text>
+                </g>
+
+                <!-- Rama SÍ de Decisión (Falta dato) -->
+                <line x1="500" y1="290" x2="500" y2="330" stroke="#d97706" stroke-width="2.5" marker-end="url(#marker-dorado)"/>
+                <g transform="translate(510, 298)">
+                  <rect width="34" height="22" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+                  <text x="17" y="15" text-anchor="middle" fill="#991b1b" font-weight="900" font-size="11">SÍ</text>
+                </g>
+
+                <!-- 4. ACCIÓN AGÉNTICA: IDENTIFICAR EL DATO FALTANTE -->
+                <g class="flow-node" transform="translate(250, 330)" filter="url(#shadow-node)">
+                  <rect width="500" height="66" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+                  <text x="250" y="26" text-anchor="middle" fill="#c2410c" font-weight="900" font-size="12.5">⚙️ ACCIÓN: IDENTIFICAR EL DATO FALTANTE</text>
+                  <text x="250" y="46" text-anchor="middle" fill="#0f172a" font-size="11">El agente revisa datos y detecta si falta tema, horario o modalidad</text>
+                </g>
+
+                <!-- Conector 4 -> 5 -->
+                <line x1="500" y1="396" x2="500" y2="432" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
+
+                <!-- 5. ACCIÓN / RESULTADO: SOLICITAR COMPLETAR Y EXPLICAR MOTIVO -->
+                <g class="flow-node" transform="translate(240, 432)" filter="url(#shadow-node)">
+                  <rect width="520" height="66" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2.5"/>
+                  <text x="260" y="26" text-anchor="middle" fill="#92400e" font-weight="900" font-size="12.5">🎯 SOLICITAR COMPLETARLO Y EXPLICAR MOTIVO</text>
+                  <text x="260" y="46" text-anchor="middle" fill="#0f172a" font-size="11">Solicita el dato faltante y explica que todavía no se puede realizar la búsqueda</text>
+                </g>
+
+                <!-- Conector 5 -> 6 -->
+                <line x1="500" y1="498" x2="500" y2="534" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
+
+                <!-- 6. INTERVENCIÓN HUMANA: EL ESTUDIANTE COMPLETA LOS DATOS -->
+                <g class="flow-node" transform="translate(240, 534)" filter="url(#shadow-node)">
+                  <rect width="520" height="74" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5" stroke-dasharray="5 3"/>
+                  <text x="260" y="26" text-anchor="middle" fill="#c2410c" font-weight="900" font-size="12.5">👤 INTERVENCIÓN HUMANA</text>
+                  <text x="260" y="45" text-anchor="middle" fill="#0f172a" font-size="11.5">El estudiante ingresa la información faltante personalmente</text>
+                  <text x="260" y="60" text-anchor="middle" fill="#7c2d12" font-size="10.5">(y si lo requiere, puede pedir orientación a un tutor)</text>
+                </g>
+
+                <!-- Bucle de Retorno / Re-evaluación R1 (Decisión del Grupo 32) -->
+                <line x1="240" y1="571" x2="100" y2="571" stroke="#0d9488" stroke-width="2.5"/>
+                <line x1="100" y1="571" x2="100" y2="134" stroke="#0d9488" stroke-width="2.5"/>
+                <line x1="100" y1="134" x2="260" y2="134" stroke="#0d9488" stroke-width="2.5" marker-end="url(#marker-turquesa)"/>
+
+                <!-- Badge legible rotado sin tapar la línea -->
+                <g transform="translate(112, 390) rotate(-90)">
+                  <rect x="-120" y="-12" width="240" height="24" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+                  <text x="0" y="4" text-anchor="middle" fill="#0f766e" font-weight="800" font-size="11">
+                    Vuelve a evaluar R1 [Decisión Grupo 32]
+                  </text>
+                </g>
+
+                <!-- Conector 6 -> FIN -->
+                <line x1="500" y1="608" x2="500" y2="676" stroke="#0f172a" stroke-width="2.5" marker-end="url(#marker-carbon)"/>
+
+                <!-- 7. FIN -->
+                <g class="flow-node" transform="translate(370, 676)" filter="url(#shadow-node)">
+                  <rect width="260" height="46" rx="23" fill="#0f172a" stroke="#0d9488" stroke-width="2.5"/>
+                  <text x="130" y="28" text-anchor="middle" fill="#ffffff" font-weight="800" font-size="14">■ FIN (En espera / Reanuda)</text>
+                </g>
+              </svg>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         6. SECCIÓN DESPLEGABLES (ACORDEONES DE DETALLE TÉCNICO)
+         ========================================================================= -->
+    <section id="detalle-tecnico" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Especificación Técnica</span>
+          <h2 class="section-title">Detalle Técnico de cada Propuesta</h2>
+          <p class="section-lead">
+            Paneles desplegables accesibles por clic y teclado (<kbd>Enter</kbd> / <kbd>Espacio</kbd> / flechas de dirección), con todo el detalle de entradas, decisiones, acciones, resultados, excepciones y decisiones del grupo.
+          </p>
+        </div>
+
+        <div class="accordion-group">
+          
+          <!-- Acordeón Propuesta 1 (R1) -->
+          <div class="accordion-item" data-flow="r1">
+            <button type="button" class="accordion-trigger" id="accordion-trigger-r1" aria-expanded="false" aria-controls="accordion-panel-r1">
+              <span class="trigger-title">
+                <span class="flow-pill">Flujo 1</span>
+                <span>Ficha Técnica: Propuesta 1 · Buscador inteligente (R1 · p ∧ q ∧ r)</span>
+              </span>
+              <span class="trigger-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-panel" id="accordion-panel-r1" role="region" aria-labelledby="accordion-trigger-r1" hidden>
+              <div class="technical-grid">
+                
+                <div class="tech-item">
+                  <div class="tech-label">1) Datos de entrada</div>
+                  <div class="tech-value">
+                    <p>Tema de estudio, disponibilidad y modalidad.</p>
+                  </div>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-label">2) Decisión</div>
+                  <div class="tech-value">
+                    <p>El agente comprueba si los tres datos están completos (<code class="formula-chip">p ∧ q ∧ r</code>).</p>
+                  </div>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-label">3) Acción propuesta</div>
+                  <div class="tech-value">
+                    <p>Si están completos, consulta la base de datos de perfiles de StudyMatch y busca estudiantes con condiciones compatibles.</p>
+                  </div>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-label">4) Herramienta necesaria</div>
+                  <div class="tech-value">
+                    <p>Base de datos de perfiles de StudyMatch.</p>
+                  </div>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-label">5) Resultado esperado</div>
+                  <div class="tech-value">
+                    <p>El sistema devuelve una lista de compañeros compatibles para que el estudiante pueda elegir.</p>
+                  </div>
+                </div>
+
+                <div class="tech-item highlight-human">
+                  <div class="tech-label">6) Excepciones e intervención humana</div>
+                  <div class="tech-value">
+                    <ul>
+                      <li>Si falta algún dato, se deriva al Flujo 2.</li>
+                      <li>Si no se encuentran compañeros compatibles, se informa al estudiante y se le ofrecen alternativas <em>(decisión del grupo)</em>.</li>
+                      <li><strong>Intervención humana:</strong> El estudiante decide con quién desea conectarse.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Acordeón Propuesta 2 (R2) -->
+          <div class="accordion-item" data-flow="r2">
+            <button type="button" class="accordion-trigger" id="accordion-trigger-r2" aria-expanded="false" aria-controls="accordion-panel-r2">
+              <span class="trigger-title">
+                <span class="flow-pill flow-pill-amber">Flujo 2</span>
+                <span>Ficha Técnica: Propuesta 2 · Asistente de perfil (R2 · ¬p ∨ ¬q ∨ ¬r)</span>
+              </span>
+              <span class="trigger-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-panel" id="accordion-panel-r2" role="region" aria-labelledby="accordion-trigger-r2" hidden>
+              <div class="technical-grid">
+                
+                <div class="tech-item">
+                  <div class="tech-label">1) Datos de entrada</div>
+                  <div class="tech-value">
+                    <p>Tema de estudio, disponibilidad y modalidad.</p>
+                  </div>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-label">2) Decisión</div>
+                  <div class="tech-value">
+                    <p>El agente verifica si falta al menos uno de los tres datos (<code class="formula-chip chip-amber">¬p ∨ ¬q ∨ ¬r</code>).</p>
+                  </div>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-label">3) Acción propuesta</div>
+                  <div class="tech-value">
+                    <p>Si falta información, identifica los campos incompletos, solicita completarlos y explica por qué todavía no puede realizar la búsqueda.</p>
+                  </div>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-label">4) Herramienta necesaria</div>
+                  <div class="tech-value">
+                    <p>Formulario de ingreso de datos de StudyMatch. No necesita consultar la base de datos de compañeros.</p>
+                  </div>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-label">5) Resultado esperado</div>
+                  <div class="tech-value">
+                    <p>El estudiante sabe qué información falta y puede completarla para continuar.</p>
+                  </div>
+                </div>
+
+                <div class="tech-item highlight-human">
+                  <div class="tech-label">6) Excepciones e intervención humana</div>
+                  <div class="tech-value">
+                    <ul>
+                      <li><strong>Intervención humana:</strong> El estudiante debe ingresar personalmente los datos faltantes.</li>
+                      <li>Si los datos están completos, R2 no se activa y se continúa con R1.</li>
+                      <li>Una vez completados los datos, el agente vuelve a evaluar R1 <em>(decisión del grupo)</em>.</li>
+                      <li>Si la disponibilidad tiene un formato inválido, se informa el error y se solicita corregirlo <em>(decisión del grupo)</em>.</li>
+                      <li>El formato permitido es <code>desde: hh:mm hasta: hh:mm</code> (por ejemplo, <code>08:00 hasta 12:00</code>), restringiendo caracteres y formatos distintos <em>(decisión del grupo)</em>.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       7. PIE DE PÁGINA INSTITUCIONAL
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h4 class="footer-heading">IFTS N° 29</h4>
+        <p class="footer-text">Tecnicatura Superior en Desarrollo de Software</p>
+        <p class="footer-text"><strong>Materia:</strong> Desarrollo de Sistemas Web Front End</p>
+        <p class="footer-text"><strong>Instancia:</strong> Trabajo Práctico N° 3 (TP3)</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Equipo 32 (Integrantes)</h4>
+        <ul class="footer-team-list">
+          <li>Sergio Cesar Barrientos</li>
+          <li>Carolina Silva Cotto</li>
+          <li>Miguel Angel Marcaida</li>
+          <li>Mariana Sosa</li>
+          <li>Karina Sanchez</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Startup Asignada</h4>
+        <p class="footer-text"><strong>Startup:</strong> StudyMatch.</p>
+        <p class="footer-text"><strong>Origen:</strong> Creada por estudiantes del <strong>IFTS 16</strong></p>
+        <p class="footer-text"><strong>Presentación y propuesta:</strong> Equipo 32 (<strong>IFTS 29</strong>)</p>
+        <p class="footer-text"><strong>Bloque asignado:</strong> Perfil y búsqueda · S13-A</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Equipo 32 · IFTS 29 · Caso StudyMatch (IFTS 16) · Todos los derechos reservados.</p>
+        <p class="footer-status-pill">Soporte Multitema · Modo Claro y Modo Oscuro</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
